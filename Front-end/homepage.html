@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/base.css">
-    <link rel="icon" type="image/x-icon" href="/assets/img/logo.png">
+    <link rel="icon" type="image/x-icon" href="/Front-end/assets/img/logo.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <title>Trang chủ Macadonut</title>
 </head>
 
@@ -16,6 +17,16 @@
         padding-left: 100px;
         padding-right: 100px;
         background-color: #FCF8F0;
+    }
+
+    .c-item {
+        height: 480px;
+    }
+
+    .c-image {
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(0.8);
     }
 </style>
 
@@ -83,27 +94,57 @@
     </nav>
 
     <!-- SLIDER -->
-    <div id="carouselExampleSlideOnly" class="carousel slide" data-bs-slide="carousel">
+    <div id="carouselExampleRide" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="/assets/img/img-slider(1).jpg" class="d-block w-100" alt="abc">
-          </div>
-          <div class="carousel-item">
-            <img src="https://vcdn-vnexpress.vnecdn.net/2023/09/21/snapedit-1695287679841-8439-1695287949.png" class="d-block w-100" alt="def">
-          </div>
-          <div class="carousel-item">
-            <img src="/assets/img/img-slider(3).jpg" class="d-block w-100" alt="ghi">
-          </div>
+            <div class="carousel-item active c-item" data-bs-interval="5000">
+                <img src="/Front-end/assets/img/macaron.jpg" class="d-block w-100 c-image" alt="Macaron">
+                <div class="carousel-caption d-none d-md-block top-50">
+                    <h3 class="text-uppercase">Bon appétit</h5>
+                    <p class="fs-5 fst-italic">Welcome to your neighborhood bakery</p>
+                </div>
+            </div>
+            <div class="carousel-item c-item" data-bs-interval="5000">
+                <img src="/Front-end/assets/img/donut(2).jpg" class="d-block w-100 c-image" alt="donutamerica">
+                <div class="carousel-caption d-none d-md-block top-50">
+                    <h3 class="text-uppercase">Bon appétit</h5>
+                    <p class="fs-5 fst-italic">Welcome to your neighborhood bakery</p>
+                </div>
+            </div>
+            <div class="carousel-item c-item" data-bs-interval="5000">
+                <img src="/Front-end/assets/img/donut(1).jpg" class="d-block w-100 c-image" alt="donutfrench">
+                <div class="carousel-caption d-none d-md-block top-50">
+                    <h3 class="text-uppercase">Bon appétit</h5>
+                    <p class="fs-5 fst-italic">Welcome to your neighborhood bakery</p>
+                </div>
+            </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
         </button>
     </div>
+
+    <!-- Danh mục -->
+    <div class="container mt-3">
+        <div class="row">
+            <p class="h3 text-uppercase">danh mục món ăn</p>
+            <hr class="hr" style="border: 2px solid #767676;">
+        </div>
+    </div>
 </body>
+
+<script>
+    // Khởi tạo carousel
+    // $(document).ready(function () {
+    //     $('#carouselExample').carousel();
+    // });
+    // $('#carouselExample').carousel({
+    //     interval: 1000
+    // });
+</script>
 
 </html>
