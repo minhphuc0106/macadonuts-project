@@ -18,17 +18,21 @@
     body {
         background: linear-gradient(180deg, #fff, rgb(247, 247, 245));
     }
+
     .navbar {
         padding-left: 100px;
         padding-right: 100px;
         background-color: #FCF8F0;
     }
-    .sale-off-card {
+
+    .cart-waiting,
+    .cart_info-detail {
         box-shadow: 5px 10px 18px rgba(0, 0, 0, 0.1);
         transition: transform linear 0.1s;
         will-change: transform;
     }
-    .sale-off-card:hover {
+
+    .cart-waiting:hover{
         transform: translateY(-2px);
         box-shadow: 5px 10px 28px rgba(0, 0, 0, 0.05);
     }
@@ -99,225 +103,143 @@
 
     <!-- Thanh lựa chọn -->
     <section class="bg-dark text-warning pt-5 pb-0 mt-5">
-        <div class="container tex-md-left">
-            <div class="row tex-center text-md-left">
-                <!-- Logo -->
-                <!-- <div class="col-md-2 col-lg-2 col-xl-2 mx-auto position-relative">
-                    <img src="./assets/img/logo.png" alt="" width="200px" >
-                </div> -->
 
-                <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 fw-bold text-center">khuyến mãi</h5>
-                </div>
-
-                <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 fw-bold text-center">Macaron</h5>
-                </div>
-
-                <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 fw-bold text-center">Donut</h5>                    
-                </div>
-            </div>
-        </div>
     </section>
 
     <!-- KHUYẾN MÃI -->
     <div class="container mt-5">
         <div class="row mb-3">
-            <p class="h3 text-sm-start text-md-start text-uppercase fw-bolder text-black">KHUYẾN MÃI</p>
+            <!-- CARD -->
+            <div class="col-lg-8">
+                <p class="h3 text-sm-start text-md-start text-uppercase fw-bolder text-black">Giỏ hàng của tôi</p>
+                <!-- Card -->
+                <div class="card cart-waiting w-100 border-0 mb-4" style="height: 180px;">
+                    <div class="card-body">
+                        <div class="row g-4">
+                            <!-- Hình nền -->
+                            <div class="col-md-4">
+                                <img src="/Front-end/assets/img/menu-picture(1).avif" alt="" class="img-fluid" style="height: 150px; width: 300px; object-fit: cover;">
+                            </div>
+                            <!-- Info -->
+                            <div class="col-md-4">
+                                <div class="row d-flex">
+                                    <p class="text-capitalize fw-bold fs-5">Macaron thượng hạng</p>
+                                    <p style="width: 250px; color: darkgray;">Macaron 3 lớp mềm mịn, sánh đều, thơm ngon mời bạn ăn nhaaaaaaa hehe hihi hohoo</p>
+                                    <!-- <h6 class="text-capitalize fw-bold text-decoration-underline">Xoá</h4> -->
+                                </div>
+                            </div>
+                            <!-- Chỉnh sửa -->
+                            <div class="col-md-4 d-flex align-items-center">
+                                <div class="d-flex flex-row bd-highlight mb-3 fs-4 fw-semibold justify-content-between link-danger" style="width: 100%;">
+                                    <i class="bi bi-dash-circle"></i>
+                                    <span>1</span>
+                                    <i class="bi bi-plus-circle"></i>
+                                    <span class="fs-5">40.000</span>
+                                    <i class="bi bi-trash"></i>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card cart-waiting w-100 border-0 mb-4" style="height: 180px;">
+                    <div class="card-body">
+                        <div class="row g-4">
+                            <!-- Hình nền -->
+                            <div class="col-md-4">
+                                <img src="/Front-end/assets/img/menu-picture(1).avif" alt="" class="img-fluid" style="height: 150px; width: 300px; object-fit: cover;">
+                            </div>
+                            <!-- Info -->
+                            <div class="col-md-4">
+                                <div class="row d-flex">
+                                    <p class="text-capitalize fw-bold fs-5">Macaron thượng hạng</p>
+                                    <p style="width: 250px; color: darkgray;">Macaron 3 lớp mềm mịn, sánh đều, thơm ngon mời bạn ăn nhaaaaaaa hehe hihi hohoo</p>
+                                    <!-- <h6 class="text-capitalize fw-bold text-decoration-underline">Xoá</h4> -->
+                                </div>
+                            </div>
+                            <!-- Chỉnh sửa -->
+                            <div class="col-md-4 d-flex align-items-center">
+                                <div class="d-flex flex-row bd-highlight mb-3 fs-4 fw-semibold justify-content-between link-danger" style="width: 100%;">
+                                    <i class="bi bi-dash-circle"></i>
+                                    <span>1</span>
+                                    <i class="bi bi-plus-circle"></i>
+                                    <span class="fs-5">40.000</span>
+                                    <i class="bi bi-trash"></i>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card cart-waiting w-100 border-0 mb-4" style="height: 180px;">
+                    <div class="card-body">
+                        <div class="row g-4">
+                            <!-- Hình nền -->
+                            <div class="col-md-4">
+                                <img src="/Front-end/assets/img/menu-picture(1).avif" alt="" class="img-fluid" style="height: 150px; width: 300px; object-fit: cover;">
+                            </div>
+                            <!-- Info -->
+                            <div class="col-md-4">
+                                <div class="row d-flex">
+                                    <p class="text-capitalize fw-bold fs-5">Macaron thượng hạng</p>
+                                    <p style="width: 250px; color: darkgray;">Macaron 3 lớp mềm mịn, sánh đều, thơm ngon mời bạn ăn nhaaaaaaa hehe hihi hohoo</p>
+                                    <!-- <h6 class="text-capitalize fw-bold text-decoration-underline">Xoá</h4> -->
+                                </div>
+                            </div>
+                            <!-- Chỉnh sửa -->
+                            <div class="col-md-4 d-flex align-items-center">
+                                <div class="d-flex flex-row bd-highlight mb-3 fs-4 fw-semibold justify-content-between link-danger" style="width: 100%;">
+                                    <i class="bi bi-dash-circle"></i>
+                                    <span>1</span>
+                                    <i class="bi bi-plus-circle"></i>
+                                    <span class="fs-5">40.000</span>
+                                    <i class="bi bi-trash"></i>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Thông tin chi tiết -->
+            <div class="col-lg-4">
+                <br> <br>
+                <div class="card cart_info-detail w-75 border-0" style="height: 340px;">
+                    <div class="card-body">
+                        <h6 class="text-uppercase fw-bold">3 món</h3>
+                        <h6 class="fw-bold mt-3">Bạn có mã giảm giá?</h6>
+                        <p class="mt-0">Mã giảm giá</p>
+                        <div class="row d-flex">
+                            <div class="col-7 w-75">
+                                <input type="text" class="form-control">
+                            </div>
+                            <button class="col-5 btn btn-dark w-25" style="font-size: small;">Áp dụng</button>
+                        </div>
+
+                        <div class="cost mt-4">
+                            <div class="d-flex flex-row justify-content-between">
+                                <span class="fw-semibold">Tổng đơn hàng</span>
+                                <span class="fw-bold">185.000</span>
+                            </div>
+                            <div class="d-flex flex-row justify-content-between">
+                                <span class="fw-semibold">Phí giao hàng</span>
+                                <span class="fw-bold">15.000</span>
+                            </div>
+                            <div class="d-flex flex-row justify-content-between">
+                                <span class="fw-semibold">Tổng thanh toán</span>
+                                <span class="fw-bold">200.000</span>
+                            </div>
+
+                            <button class="btn btn-danger d-grid mx-auto mt-3">Thanh toán</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="row mb-3">
-            <div class="col-md-2 col-lg-3 col-xl-3 mx-auto mt-3">
-                <div class="card sale-off-card w-75 border-0" style="height: 340px;">
-                    <div class="card-body">
-                        <img src="/Front-end/assets/img/menu-picture(1).avif" alt="" class="img-fluid" style="height: 200px; width: 300px; object-fit: cover;">
-                        <div class="row d-flex justify-content-center">
-                            <p class="col-7">Macaron thượng hạng</p>
-                            <div class="col-5 mt-1" style="line-height: 22px;">
-                                <span class="fs-5 fw-semibold text-danger">40.000</span>                               
-                                <span class="fs-6 fw-semibold text-decoration-line-through">60.000</span>                               
-                            </div>
-                        </div>
-                        <button type="button" class="btn btn-danger d-grid gap-2 col-6 mx-auto fs-6">Thêm</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                <div class="card sale-off-card w-75 border-0" style="height: 340px;">
-                    <div class="card-body">
-                        <img src="/Front-end/assets/img/menu-picture(1).avif" alt="" class="img-fluid" style="height: 200px; width: 300px; object-fit: cover;">
-                        <div class="row d-flex justify-content-center">
-                            <p class="col-7">Macaron thượng hạng</p>
-                            <div class="col-5 mt-1" style="line-height: 22px;">
-                                <span class="fs-5 fw-semibold text-danger">40.000</span>                               
-                                <span class="fs-6 fw-semibold text-decoration-line-through">60.000</span>                               
-                            </div>
-                        </div>
-                        <button type="button" class="btn btn-danger d-grid gap-2 col-6 mx-auto fs-6">Thêm</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                <div class="card sale-off-card w-75 border-0" style="height: 340px;">
-                    <div class="card-body">
-                        <img src="/Front-end/assets/img/menu-picture(1).avif" alt="" class="img-fluid" style="height: 200px; width: 300px; object-fit: cover;">
-                        <div class="row d-flex justify-content-center">
-                            <p class="col-7">Macaron thượng hạng</p>
-                            <div class="col-5 mt-1" style="line-height: 22px;">
-                                <span class="fs-5 fw-semibold text-danger">40.000</span>                               
-                                <span class="fs-6 fw-semibold text-decoration-line-through">60.000</span>                               
-                            </div>
-                        </div>
-                        <button type="button" class="btn btn-danger d-grid gap-2 col-6 mx-auto fs-6">Thêm</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                <div class="card sale-off-card w-75 border-0" style="height: 340px;">
-                    <div class="card-body">
-                        <img src="/Front-end/assets/img/menu-picture(1).avif" alt="" class="img-fluid" style="height: 200px; width: 300px; object-fit: cover;">
-                        <div class="row d-flex justify-content-center">
-                            <p class="col-7">Macaron thượng hạng</p>
-                            <div class="col-5 mt-1" style="line-height: 22px;">
-                                <span class="fs-5 fw-semibold text-danger">40.000</span>                               
-                                <span class="fs-6 fw-semibold text-decoration-line-through">60.000</span>                               
-                            </div>
-                        </div>
-                        <button type="button" class="btn btn-danger d-grid gap-2 col-6 mx-auto fs-6">Thêm</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
     </div>
 
-    <!-- MACARON -->
-    <div class="container mt-5">
-        <div class="row mb-3">
-            <p class="h3 text-sm-start text-md-start text-uppercase fw-bolder text-black">MACARON</p>
-        </div>
-
-        <div class="row mb-3">
-            <div class="col-md-2 col-lg-3 col-xl-3 mx-auto mt-3">
-                <div class="card sale-off-card w-75 border-0" style="height: 340px;">
-                    <div class="card-body">
-                        <img src="/Front-end/assets/img/menu-picture(1).avif" alt="" class="img-fluid" style="height: 200px; width: 300px; object-fit: cover;">
-                        <div class="row d-flex justify-content-center">
-                            <p class="col-7">Macaron thượng hạng</p>
-                            <span class="col-5 fs-5 fw-semibold text-danger">40.000</span>
-                        </div>
-                        <button type="button" class="btn btn-danger d-grid gap-2 col-6 mx-auto fs-6">Thêm</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                <div class="card sale-off-card w-75 border-0" style="height: 340px;">
-                    <div class="card-body">
-                        <img src="/Front-end/assets/img/menu-picture(1).avif" alt="" class="img-fluid" style="height: 200px; width: 300px; object-fit: cover;">
-                        <div class="row d-flex justify-content-center">
-                            <p class="col-7">Macaron thượng hạng</p>
-                            <span class="col-5 fs-5 fw-semibold text-danger">40.000</span>                               
-                        </div>
-                        <button type="button" class="btn btn-danger d-grid gap-2 col-6 mx-auto fs-6">Thêm</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                <div class="card sale-off-card w-75 border-0" style="height: 340px;">
-                    <div class="card-body">
-                        <img src="/Front-end/assets/img/menu-picture(1).avif" alt="" class="img-fluid" style="height: 200px; width: 300px; object-fit: cover;">
-                        <div class="row d-flex justify-content-center">
-                            <p class="col-7">Macaron thượng hạng</p>
-                            <span class="col-5 fs-5 fw-semibold text-danger">40.000</span>
-                        </div>
-                        <button type="button" class="btn btn-danger d-grid gap-2 col-6 mx-auto fs-6">Thêm</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                <div class="card sale-off-card w-75 border-0" style="height: 340px;">
-                    <div class="card-body">
-                        <img src="/Front-end/assets/img/menu-picture(1).avif" alt="" class="img-fluid" style="height: 200px; width: 300px; object-fit: cover;">
-                        <div class="row d-flex justify-content-center">
-                            <p class="col-7">Macaron thượng hạng</p>
-                            <span class="col-5 fs-5 fw-semibold text-danger">40.000</span>
-                        </div>
-                        <button type="button" class="btn btn-danger d-grid gap-2 col-6 mx-auto fs-6">Thêm</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
     </div>
 
-    <!-- DONUT -->
-    <div class="container mt-5">
-        <div class="row mb-3">
-            <p class="h3 text-sm-start text-md-start text-uppercase fw-bolder text-black">DONUT</p>
-        </div>
-
-        <div class="row mb-3">
-            <div class="col-md-2 col-lg-3 col-xl-3 mx-auto mt-3">
-                <div class="card sale-off-card w-75 border-0" style="height: 340px;">
-                    <div class="card-body">
-                        <img src="/Front-end/assets/img/menu-picture(1).avif" alt="" class="img-fluid" style="height: 200px; width: 300px; object-fit: cover;">
-                        <div class="row d-flex justify-content-center">
-                            <p class="col-7">Macaron thượng hạng</p>
-                            <span class="col-5 fs-5 fw-semibold text-danger">40.000</span>
-                        </div>
-                        <button type="button" class="btn btn-danger d-grid gap-2 col-6 mx-auto fs-6">Thêm</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                <div class="card sale-off-card w-75 border-0" style="height: 340px;">
-                    <div class="card-body">
-                        <img src="/Front-end/assets/img/menu-picture(1).avif" alt="" class="img-fluid" style="height: 200px; width: 300px; object-fit: cover;">
-                        <div class="row d-flex justify-content-center">
-                            <p class="col-7">Macaron thượng hạng</p>
-                            <span class="col-5 fs-5 fw-semibold text-danger">40.000</span>
-                        </div>
-                        <button type="button" class="btn btn-danger d-grid gap-2 col-6 mx-auto fs-6">Thêm</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                <div class="card sale-off-card w-75 border-0" style="height: 340px;">
-                    <div class="card-body">
-                        <img src="/Front-end/assets/img/menu-picture(1).avif" alt="" class="img-fluid" style="height: 200px; width: 300px; object-fit: cover;">
-                        <div class="row d-flex justify-content-center">
-                            <p class="col-7">Macaron thượng hạng</p>
-                            <span class="col-5 fs-5 fw-semibold text-danger">40.000</span>
-                        </div>
-                        <button type="button" class="btn btn-danger d-grid gap-2 col-6 mx-auto fs-6">Thêm</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                <div class="card sale-off-card w-75 border-0" style="height: 340px;">
-                    <div class="card-body">
-                        <img src="/Front-end/assets/img/menu-picture(1).avif" alt="" class="img-fluid" style="height: 200px; width: 300px; object-fit: cover;">
-                        <div class="row d-flex justify-content-center">
-                            <p class="col-7">Macaron thượng hạng</p>
-                            <span class="col-5 fs-5 fw-semibold text-danger">40.000</span>
-                        </div>
-                        <button type="button" class="btn btn-danger d-grid gap-2 col-6 mx-auto fs-6">Thêm</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-    </div>
     <!-- FOOTER -->
     <footer class="bg-dark text-white pt-5 pb-4 mt-5">
         <div class="container tex-md-left">
